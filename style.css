@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Montagu+Slab:wght@300;400&family=Philosopher&family=Playfair+Display:wght@500&family=Poppins&display=swap');
+
+
+/* Corpo */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Corpo */
+body{
+  background: #000;
+  user-select: none;
+
+}
+
+/* menu */
+header{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top:0;
+  left:0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  margin: auto;
+  z-index: 10;
+}
+
+/* Menu logo  */
+header .logo h2{
+  color: #fff;
+  font-size: 1.5rem;
+  align-items: center;
+  display: flex;
+  margin: auto;
+
+
+  
+}
+/* Menu logo espaçamento */
+header .logo {
+  max-height: 150px;
+  
+}
+
+/* Botões do Menu */
+ .nav{
+  display: flex;
+  
+}
+
+/* Botões do menu li */
+.nav li{
+  list-style: none;
+  margin: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Botões do menu o designer */
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* quando o passa no botao do menu */
+.nav li:hover{
+  color:#00BFFF;
+}
+
+/* posicionamento do banner */
+.banner{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* onde fica a imagem do banner*/
+.banner .bg{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* config das informações*/
+.content{
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* onde fica a palavra Aegnimatas*/
+.movietitle{
+  max-width: 250px;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 4em;
+  user-select: none;
+}
+
+/* formato das informações */
+.banner .content h4{
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 0;
+  
+}
+/* formato das informações e span */
+.banner .content h4 span{
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  
+}
+
+/* espaçamento das informações */
+.banner .content h4 span:first-child{
+  padding-left: 0;
+}
+
+
+.banner .content h4 span:last-child{
+  border-right: none;
+}
+
+/* icones dentro da informação */
+.banner .content h4 span i{
+  background: #C11818;
+  color: #fff;
+  padding: 1px 8px;
+  display: inline-block;
+  font-size: normal;
+  border-radius: 2px;
+}
+
+/* texto do banner  */
+.banner .content p{
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color:#fff;
+  margin: 10px 0 20px;
+  user-select: none;
+}
+
+/* botoes abaixo das informações */
+.banner .content .buttons{
+  position: relative;
+  
+}
+
+/* tamanho do java e sql*/
+.banner .content .buttons a i{
+  font-size: 20px;
+}
+
+/* cor de fundo do sql*/
+.banner .content .buttons  #sql{
+  background: #A020F0;
+}
+
+
+/* config dos botões */
+.banner .content .buttons a{
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  background: #4B0082;
+  color:#fff;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.p-play{
+
+  position: relative;
+  display: flex;
+  margin-top: 15px;
+  align-items: flex-end;
+  color:#fff;
+  width: 100%;
+  
+  
+}
+
+/* config da frase trailer */
+ .p-play .play{
+  color:#fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+
+  
+}
+
+.play:hover{
+  color: #00BFFF;
+  cursor: pointer;
+}
+
+/* imagem do play */
+.p-play .play .fa{
+  margin-right: 10px;
+  max-width: 50px;
+  color:#fff;
+  background-color: #000;
+}
+
+/* onde o video */
+.trailer{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index:10000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* quando o vídeo e ativado */
+.trailer.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* tamanho do video */
+.trailer video{
+  max-width: 800px;
+  outline: none;
+}
+
+/* botao de sair do video */
+#closer{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  max-width: 32px;
+  color: #fff;
+}
+
+/* onde fica o card  */
+.service-modal, 
+.service-modalf,
+.service-modald{
+  z-index: 999999;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s ease;
+  user-select: none;
+  
+}
+
+/* quando clica ativa o card  */
+.service-modal.ativo, 
+.service-modalf.ativo,
+.service-modald.ativo{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* formato do card  */
+.service-modal-body, 
+.service-modalf-body{
+  position: relative;
+  background: #fff;
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+ transform: translateY(-50%);
+ transition: .3s ease;
+}
+
+.service-modald-body{
+  position: relative;
+  background: #fff;
+  max-width: 600px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+ transition: .3s ease;
+}
+
+
+/* quando clica e vem o card */
+.service-modal.ativo .service-modal-body,
+.service-modalf.ativo .service-modalf-body,
+.service-modald.ativo .service-modald-body{
+  transform: translateY(0);
+}
+
+/* parte do fechar "x" */
+.service-modal-body .modal-close-btn,
+.service-modalf-body .modalf-close-btn,
+.service-modald-body .modald-close-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+  
+}
+
+/* formato do título do card */
+.service-modal-body h3,
+.service-modalf-body h3
+{
+  font-size: 2em;
+  margin:15px 0 10px;
+  user-select: none;
+  text-align: center;
+}
+
+/* lista do card  */
+.service-modal-body ul li,
+.service-modalf-body ul li
+{
+  margin-top: 15px;
+  list-style: none;
+}
+
+.service-modald-body ul li{
+  list-style: none;
+  margin-top: 2px;
+}
+
+.service-modald-body h3{
+  font-size: 2em;
+  margin:5px 0 2px;
+  user-select: none;
+  text-align: center;
+}
+
+/* formato do título do card */
+.service-modal-body h4,
+.service-modalf-body h4,
+.service-modald-body h4{
+  font-size: 1.2em;
+  margin:15px 0 10px;
+  user-select: none;
+}
+
+
+/* icone da lista o card  */
+.service-modal-body ul li i,
+.service-modalf-body ul li i,
+.service-modald-body ul li i{
+  color: #A12174;
+  margin-left: 40px;
+}
+
+
+/*na vdd é 991px */
+@media(max-width: 991px){
+  header{
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+  .nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .banner{
+    padding: 100px 50px;
+  }
+  
+  .banner .play{
+    font-size: 1em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+  }
+  
+  .play img{
+    max-width: 40px;
+    margin-right: 10px;
+  }
+  
+  .trailer video{
+    max-width: 90%;
+  }
+
+  .service-modal-body, 
+  .service-modalf-body{
+  
+  margin: 5px;
+  padding: 10px;
+  }
+
+  .service-modal-body h3,
+  .service-modalf-body h3{
+    margin:5px 0 2px;
+}
+.service-modal-body ul li,
+.service-modalf-body ul li
+{
+  margin-top: 2px;
+  
+}
+
+
+}
+
+@media(max-width:600px){
+  header{
+    padding: 20px;
+  }
+  .search{
+    position: relative;
+    width: calc(100% - 20px);
+    height: 40px;
+  }
+ .banner{
+   padding: 120px 20px 120px;
+ }
+ 
+ 
+ .banner .play{
+   left:20px;
+   font-size: 1em;
+   bottom: 30px;
+ }
+
+ .service-modal-body, 
+ .service-modalf-body{
+ 
+ margin: 5px;
+ padding: 8px;
+ }
+
+ .service-modal-body h3,
+ .service-modalf-body h3{
+   margin:3px 0 2px;
+   text-align: center;
+}
+.service-modal-body ul li,
+.service-modalf-body ul li
+{
+ margin-top: 2px;
+ font-size: 12px;
+ 
+}
+
+}

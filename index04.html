@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> 
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <script src="https://kit.fontawesome.com/a2b3da0c65.js " crossorigin=" anonymous "></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Ænigmata</title>
+
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h2>Ænigmata</h2>
+    </div>
+      <!-- menu -->
+    <ul class="nav">
+      <li><a class="historia">História</a></li>
+      <li><a class="fases">Fases</a></li>
+      <li><a class="des">Desenvolvimento</a></li>
+    </ul>
+  </header>
+  
+    <!-- banner/corpo -->
+  <div class="banner">
+    <img src="vidas-02.jpeg" alt="banner" class="bg">
+    <div class="content">
+      <h2 class="movietitle">
+        Ænigmata
+      </h2>
+        <!-- informações -->
+      <h4>
+      <span>1° Semestre - 2021</span>
+      <span><i>16+</i></span>
+      <span>Tamanho 200mb</span>
+      <span>Mistério / Aventura</span>
+      </h4>
+        <!-- parte do texto  -->
+      <p>
+        Ænigmata é um jogo educacional desenvolvido por alunos do curso de Análise e Desenvolvimento de Sistemas da faculdade Centro Universitário Braz Cubas. O jogo proporciona uma história envolvente e uma jogabilidade, onde o jogador terá que solucionar alguns desafios com as dicas e conhecimento que obtém. Ænigmata foca no aprendizado de Vetor e Matriz, e traz divertimento, mistérios, desafios e aprendizagem.
+      </p>
+      
+      <div class="buttons">
+        <a><i class="fab fa-java"></i> Java</a>
+        <a id="sql"><i class="fas fa-database"></i> SQL</a>
+        
+      </div>
+      <div class="p-play">
+        <a class="play" onclick="toogleTrailer()">
+          <i class="fa fa-play-circle" aria-hidden="true"></i>Trailer do Jogo</a>
+      </div>
+     
+      
+    </div>
+    
+   
+    <!-- video -->
+    <div class="trailer">
+      <video src="trailermpe.mp4" controls="true"></video>
+        <a><i class="fa fa-times " aria-hidden="true" id="closer" onclick="toogleTrailer()"></i></a>
+    </div>
+  </div>
+
+  
+  
+  <!-- card da história -->
+  <div class="service-modal flex-center">
+    <div class="service-modal-body">
+      <i class="fa fa-times modal-close-btn" aria-hidden="true"></i>
+      <h3>História</h3>
+      <p>Você é um aluno dedicado em seu curso, porém algo em seu professor desperta em você uma curiosidade intrigante ao ver documentos secretos em sua posse e decidi investigar a vida do professor e que documentos secretos eram aqueles. O que um professor de faculdade poderia estar escondendo?<br><br>
+        E nisso após presenciar algo que te deixa com a pulga atrás da orelha, você decide investigar, porém esta tarefa não será tão simples assim. Você irá descobrir segredos.<br>
+        Será que você conseguirá superar todos os desafios e descobrir o que seu professor pode estar escondendo. Só jogando Ænigmata para descobrir o fim dessa trama...
+      </p>
+    </div>
+  </div>
+  
+    <!-- card da fase-->
+    <div class="service-modalf flex-center">
+      <div class="service-modalf-body">
+        <i class="fa fa-times modalf-close-btn" aria-hidden="true"></i>
+        <h3>Fases do Jogo</h3>
+        <p>No decorrer do jogo, terá duas fases principais, onde você terá que resolver o desafio estabelecido pela fase, em um tempo determinado. Caso o tempo se esgote, o jogo irá reiniciar desde o começo.<br>
+        As duas fases principais são:
+        </p>
+        <ul>
+          <li><i class="fa fa-check" aria-hidden="true"></i> 
+          <span style="font-weight: 600">Biblioteca</span> - A fase consiste em abrir a porta com dicas estabelecidas dentro do cenário e com tempo determinado.
+          </li>
+          <li><i class="fa fa-check" aria-hidden="true"></i>
+        <span style="font-weight: 600">Quarto</span> - O desafio do Quarto, proporciona acessar o computador do cenário. O computador exige senhas para cada desafio proposto, onde cada senha é diferente uma da outra. As senhas é propositalmente focado em Vetor e Matriz. Dicas estarão no cenário.
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- card da desenvolvimento-->
+    <div class="service-modald flex-center">
+      <div class="service-modald-body">
+        <i class="fa fa-times modald-close-btn" aria-hidden="true"></i>
+        <h3>Desenvolvimento</h3>
+        <p>O desenvolvimento do jogo educacional foi utilizado alguns recursos como linguagem de programação.
+        </p>
+        <h4>Linguagens:</h4>
+        <ul>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Java</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> SQL</li>
+        </ul>
+        <h4>Banco de dados de imagens:</h4>
+        <ul>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Pinterest</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Vexels</li>
+        </ul>
+        <h4>Outras ferramentas:</h4>
+        <ul>
+          <li><i class="fa fa-check" aria-hidden="true"></i> NetBeans</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> MySql</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Pixel Studio</li>
+          <li><i class="fa fa-check" aria-hidden="true"></i> Adobe Photoshop</li>
+
+        </ul>
+      </div>
+    </div>
+  
+      
+  <script src="main.js"></script>
+  
+  
+</body>
+
+</html>
